@@ -38,6 +38,7 @@ namespace WindowsForms1
             if (dataTable.Rows.Count == 1)
             {
                // MessageBox.Show("Login Successful");
+               //
                 ClientForm cf = new ClientForm();
                 this.Hide();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("Search", sqlCon);
