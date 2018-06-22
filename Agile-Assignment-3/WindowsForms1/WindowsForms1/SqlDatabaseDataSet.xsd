@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SqlDatabaseDataSet" targetNamespace="http://tempuri.org/SqlDatabaseDataSet.xsd" xmlns:mstns="http://tempuri.org/SqlDatabaseDataSet.xsd" xmlns="http://tempuri.org/SqlDatabaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SqlDatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SqlDatabaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsForms1.Properties.Settings.GlobalReference.Default.SqlDatabaseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClientDataTableAdapter" GeneratorDataComponentClassName="ClientDataTableAdapter" Name="ClientData" UserDataComponentName="ClientDataTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlDatabaseConnectionString (Settings)" DbObjectName="dbo.ClientData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ClientName FROM dbo.ClientData</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ClientName" DataSetColumn="ClientName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SqlDatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SqlDatabaseDataSet" msprop:Generator_UserDSName="SqlDatabaseDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ClientData" msprop:Generator_TableClassName="ClientDataDataTable" msprop:Generator_TableVarName="tableClientData" msprop:Generator_TablePropName="ClientData" msprop:Generator_RowDeletingName="ClientDataRowDeleting" msprop:Generator_RowChangingName="ClientDataRowChanging" msprop:Generator_RowEvHandlerName="ClientDataRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientDataRowDeleted" msprop:Generator_UserTableName="ClientData" msprop:Generator_RowChangedName="ClientDataRowChanged" msprop:Generator_RowEvArgName="ClientDataRowChangeEvent" msprop:Generator_RowClassName="ClientDataRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClientName" msprop:Generator_ColumnVarNameInTable="columnClientName" msprop:Generator_ColumnPropNameInRow="ClientName" msprop:Generator_ColumnPropNameInTable="ClientNameColumn" msprop:Generator_UserColumnName="ClientName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
