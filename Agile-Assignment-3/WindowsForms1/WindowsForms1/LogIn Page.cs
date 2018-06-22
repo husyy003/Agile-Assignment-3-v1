@@ -45,6 +45,9 @@ namespace WindowsForms1
                 sqlDa.SelectCommand.Parameters.AddWithValue("@ContactName", ClientUserNameTextBox.Text.Trim());
                 DataTable dtTable = new DataTable();
                 sqlDa.Fill(dtTable);
+
+                //***That's where we could fix values for client window
+                cf.clientNameLabel.Text = "This is an example"; 
                 cf.Show();
                 
             }
@@ -64,7 +67,7 @@ namespace WindowsForms1
             sda.Fill(dataTable);
             if (dataTable.Rows.Count == 1)
             {
-                MessageBox.Show("Login Successful");
+                MessageBox.Show("Contractor Login Successful");
             }
             else
             {

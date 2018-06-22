@@ -108,6 +108,7 @@
             this.ClientPasswordTextBox.Name = "ClientPasswordTextBox";
             this.ClientPasswordTextBox.Size = new System.Drawing.Size(192, 30);
             this.ClientPasswordTextBox.TabIndex = 1;
+            this.ClientPasswordTextBox.Text = "1";
             // 
             // ClientUserNameTextBox
             // 
@@ -116,6 +117,7 @@
             this.ClientUserNameTextBox.Name = "ClientUserNameTextBox";
             this.ClientUserNameTextBox.Size = new System.Drawing.Size(192, 30);
             this.ClientUserNameTextBox.TabIndex = 1;
+            this.ClientUserNameTextBox.Text = "1";
             // 
             // passwordLogInClientLabel
             // 
