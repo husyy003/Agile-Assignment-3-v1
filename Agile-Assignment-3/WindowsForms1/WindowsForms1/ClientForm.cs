@@ -13,7 +13,7 @@ namespace WindowsForms1
 {
     public partial class ClientForm : Form
     {
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SqlDatabase.mdf;Integrated Security=True;Connect Timeout=30s");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SqlDatabase.mdf;Integrated Security=True;Connect Timeout=30");
         public ClientForm()
         {
             InitializeComponent();
