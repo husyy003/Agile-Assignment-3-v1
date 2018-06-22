@@ -57,14 +57,7 @@
             this.clientEmailTextLabel = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.Button();
             this.searchTextBox = new System.Windows.Forms.TextBox();
-            this.sqlDatabaseDataSet = new WindowsForms1.SqlDatabaseDataSet();
-            this.clientDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientDataTableAdapter = new WindowsForms1.SqlDatabaseDataSetTableAdapters.ClientDataTableAdapter();
-            this.sqlDatabaseDataSet2 = new WindowsForms1.SqlDatabaseDataSet2();
             this.jobsDataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.sqlDatabaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientDataBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sqlDatabaseDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -353,26 +346,7 @@
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(307, 22);
             this.searchTextBox.TabIndex = 60;
-            // 
-            // sqlDatabaseDataSet
-            // 
-            this.sqlDatabaseDataSet.DataSetName = "SqlDatabaseDataSet";
-            this.sqlDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientDataBindingSource
-            // 
-            this.clientDataBindingSource.DataMember = "ClientData";
-            this.clientDataBindingSource.DataSource = this.sqlDatabaseDataSet;
-            // 
-            // clientDataTableAdapter
-            // 
-            this.clientDataTableAdapter.ClearBeforeFill = true;
-            // 
-            // sqlDatabaseDataSet2
-            // 
-            this.sqlDatabaseDataSet2.DataSetName = "SqlDatabaseDataSet2";
-            this.sqlDatabaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+            
             // jobsDataGridView
             // 
             this.jobsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -424,10 +398,7 @@
             this.Name = "ClientForm";
             this.Text = "ClientForm";
             this.Load += new System.EventHandler(this.ClientForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sqlDatabaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientDataBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sqlDatabaseDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jobsDataGridView)).EndInit();
+             ((System.ComponentModel.ISupportInitialize)(this.jobsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,10 +434,8 @@
         internal System.Windows.Forms.Label clientEmailTextLabel;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.TextBox searchTextBox;
-        private SqlDatabaseDataSet sqlDatabaseDataSet;
         private System.Windows.Forms.BindingSource clientDataBindingSource;
-        private SqlDatabaseDataSetTableAdapters.ClientDataTableAdapter clientDataTableAdapter;
-        private SqlDatabaseDataSet2 sqlDatabaseDataSet2;
+        
         private System.Windows.Forms.DataGridView jobsDataGridView;
     }
 }

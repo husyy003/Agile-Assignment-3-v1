@@ -13,7 +13,8 @@ namespace WindowsForms1
 {
     public partial class LogIn_Page : Form
     {
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\yasir\Documents\DB\SqlDatabase.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection sqlCon = 
+            new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SqlDatabase.mdf;Integrated Security=True;Connect Timeout=30");
 
         public LogIn_Page()
         {
