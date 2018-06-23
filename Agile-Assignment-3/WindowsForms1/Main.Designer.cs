@@ -33,6 +33,7 @@
             this.contractorButton = new System.Windows.Forms.Button();
             this.signUpLinkLabel = new System.Windows.Forms.LinkLabel();
             this.logInLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // IQIncorporatedlabel
@@ -103,12 +104,22 @@
             this.logInLinkLabel.Text = "LogIn";
             this.logInLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logInLinkLabel_LinkClicked);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(130, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "This one";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(370, 323);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.logInLinkLabel);
             this.Controls.Add(this.signUpLinkLabel);
             this.Controls.Add(this.contractorButton);
@@ -128,6 +139,7 @@
         private System.Windows.Forms.Button contractorButton;
         private System.Windows.Forms.LinkLabel signUpLinkLabel;
         private System.Windows.Forms.LinkLabel logInLinkLabel;
+        private System.Windows.Forms.Label label1;
     }
 }
 
