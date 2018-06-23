@@ -31,7 +31,7 @@ namespace WindowsForms1
         //Client Login Button
         private void clientLogInButton_Click(object sender, EventArgs e)
         {
-            string query = "Select * from [ClientData] Where ClientName = '" + ClientUserNameLogInTextBox.Text.Trim() + "' and password = '" + ClientPasswordLogInTextBox.Text.Trim() + "'";
+            string query = "Select * from [ClientData] Where ClientName = '" + ClientUserNameTextBox.Text.Trim() + "' and password = '" + ClientPasswordTextBox.Text.Trim() + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, sqlCon);
             DataTable dataTable = new DataTable();
             sda.Fill(dataTable);
@@ -43,12 +43,12 @@ namespace WindowsForms1
                 this.Hide();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("Search", sqlCon);
                 sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlDa.SelectCommand.Parameters.AddWithValue("@ContactName", ClientUserNameLogInTextBox.Text.Trim());
+                sqlDa.SelectCommand.Parameters.AddWithValue("@ContactName", ClientUserNameTextBox.Text.Trim());
                 DataTable dtTable = new DataTable();
                 sqlDa.Fill(dtTable);
 
                 //***That's where we could fix values for client window
-                cf.clientNameTextLabel.Text = "String in LogIn page"; 
+                cf.clientNameLabel.Text = "This is an example"; 
                 cf.Show();
                 
             }
@@ -62,7 +62,7 @@ namespace WindowsForms1
         //Contractor Login Button
         private void contractorLogInButton_Click(object sender, EventArgs e)
         {
-            string query = "Select * from [ContractorData] Where ContractorName = '" + ContractorEmployeeIDLogInTextBox.Text.Trim() + "' and password = '" + ContractorPasswordLogInTextBox.Text.Trim() + "'";
+            string query = "Select * from [ContractorData] Where ContractorName = '" + ContractorEmployeeIDTextBox.Text.Trim() + "' and password = '" + ContractorPasswordTextBox.Text.Trim() + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, sqlCon);
             DataTable dataTable = new DataTable();
             sda.Fill(dataTable);
@@ -74,30 +74,6 @@ namespace WindowsForms1
             {
                 MessageBox.Show("check your username and password");
             }
-        }
-
-        private void ClientUserNameTextBox_Click(object sender, EventArgs e)
-        {
-            ClientUserNameLogInTextBox.Text = "";
-            ClientUserNameLogInTextBox.ForeColor = Color.Black;
-        }
-
-        private void ClientPasswordTextBox_Click(object sender, EventArgs e)
-        {
-            ClientPasswordLogInTextBox.Text = "";
-            ClientPasswordLogInTextBox.ForeColor = Color.Black;
-        }
-
-        private void ContractorEmployeeIDLogInTextBox_Click(object sender, EventArgs e)
-        {
-            ContractorEmployeeIDLogInTextBox.Text = "";
-            ContractorEmployeeIDLogInTextBox.ForeColor = Color.Black;
-        }
-
-        private void ContractorPasswordLogInTextBox_Click(object sender, EventArgs e)
-        {
-            ContractorPasswordLogInTextBox.Text = "";
-            ContractorPasswordLogInTextBox.ForeColor = Color.Black;
         }
     }
 }
